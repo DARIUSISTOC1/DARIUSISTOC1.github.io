@@ -6,26 +6,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
-    <nav>
-        <h1>Darius</h1>
-        <div>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À propos</a>
-            <a href="projects.html">Projets</a>
-            <a href="contact.html">Contact</a>
+
+<nav>
+    <h1>Darius</h1>
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="controls">
+        <button id="list-view">Liste</button>
+        <button id="grid-view">Grille</button>
+        <button id="theme-toggle">B/W</button>
+    </div>
+</nav>
+
+<section>
+    <h2>Mes projets</h2>
+
+    <input type="text" id="search" placeholder="Rechercher un projet...">
+
+    <div id="projects-container" class="grid">
+        <div class="card project-item">
+            <img src="https://via.placeholder.com/300x150">
+            <div>
+                <h3>Bot Discord</h3>
+                <p>Bot gestion rôles.</p>
+            </div>
         </div>
-        <button id="theme-toggle">🌙</button>
-    </nav>
 
-    <main>
-        <h2>Mes projets</h2>
-        <ul>
-            <li>Bot Discord de rôles</li>
-            <li>Tycoon Roblox</li>
-            <li>UI système de cartes</li>
-        </ul>
-    </main>
+        <div class="card project-item">
+            <img src="https://via.placeholder.com/300x150">
+            <div>
+                <h3>Tycoon Roblox</h3>
+                <p>Système économique.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
