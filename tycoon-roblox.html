@@ -2,48 +2,33 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tycoon Roblox - Darius</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="dark">
-
 <nav>
     <a href="index.html" class="nav-logo">Darius</a>
     <div class="nav-links">
         <a href="index.html">Accueil</a>
-        <a href="index.html#projets" class="active">Projets</a>
+        <a href="projects.html" class="active">Projets</a>
         <a href="index.html#contact">Contact</a>
     </div>
 </nav>
-
 <div class="project-hero">
-    <a href="index.html#projets" class="back-link">← Retour aux projets</a>
+    <a href="projects.html" class="back-link">← Retour aux projets</a>
     <h1>Tycoon <span>Roblox</span></h1>
-    <p class="project-desc">
-        Un jeu de type tycoon créé sur Roblox Studio en Lua. Le joueur gère une économie, débloque des upgrades et progresse à travers des paliers de jeu.
-    </p>
+    <p class="project-desc">Un jeu de type tycoon créé sur Roblox Studio en Lua. Le joueur gère une économie, débloque des upgrades et progresse à travers des paliers de jeu.</p>
     <div class="tags">
-        <span class="tag">Roblox Studio</span>
+        <span class="tag">Roblox</span>
         <span class="tag">Lua</span>
         <span class="tag">Game Design</span>
-        <span class="tag">Économie</span>
     </div>
-    <img
-        src="img/tycoon-roblox.jpg"
-        alt="Aperçu du Tycoon Roblox"
-        class="project-img-main"
-        onerror="this.src='https://via.placeholder.com/900x440/1b1b1d/7c5cff?text=Tycoon+Roblox'"
-    >
+    <img src="img/tycoon-roblox.jpg" alt="Tycoon Roblox" class="project-img-main" onerror="this.onerror=null;this.src='https://placehold.co/900x420/1b1b1d/7c5cff?text=Tycoon+Roblox'">
 </div>
-
 <div class="project-content">
-    <h2>Concept du jeu</h2>
-    <p>
-        Le joueur commence avec un terrain vide et génère de l'argent en construisant des structures.
-        Chaque upgrade débloque de nouveaux bâtiments et augmente les revenus passifs.
-    </p>
-
+    <h2>Concept</h2>
+    <p>Le joueur commence avec un terrain vide et génère de l'argent en construisant des structures. Chaque upgrade débloque de nouveaux bâtiments et augmente les revenus passifs.</p>
     <h2>Systèmes développés</h2>
     <ul>
         <li>Système d'argent avec revenus passifs</li>
@@ -51,16 +36,9 @@
         <li>Sauvegarde de la progression joueur (DataStore)</li>
         <li>Interface utilisateur in-game</li>
     </ul>
-
     <h2>Ce que j'ai appris</h2>
-    <p>
-        Ce projet m'a introduit à la logique de game design, à la gestion de données persistantes
-        avec le DataStore de Roblox, et à la communication Client-Serveur en Lua via RemoteEvents.
-    </p>
+    <p>Ce projet m'a introduit à la logique de game design, à la gestion de données persistantes avec le DataStore de Roblox, et à la communication Client-Serveur via RemoteEvents.</p>
 </div>
-
-<footer>
-    <p>© 2026 Darius</p>
-</footer>
+<footer><p>© 2026 Darius</p></footer>
 </body>
 </html>
