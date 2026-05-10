@@ -1,42 +1,94 @@
 :root {
     --bg: white;
     --text: black;
-    --nav: #f0f0f0;
+    --card: #f3f3f3;
+    --nav: #eaeaea;
+    --button: #d9d9d9;
 }
 
 body.dark {
     --bg: #111827;
     --text: white;
-    --nav: #1f2937;
+    --card: #1f2937;
+    --nav: #0f172a;
+    --button: #374151;
 }
 
 body {
-    background: var(--bg);
-    color: var(--text);
     margin: 0;
     font-family: Arial;
+    background: var(--bg);
+    color: var(--text);
 }
 
 nav {
-    background: var(--nav);
-    padding: 20px;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
+    background: var(--nav);
     align-items: center;
 }
 
-nav a {
+.nav-links a {
     margin: 0 10px;
-    color: var(--text);
     text-decoration: none;
+    color: var(--text);
 }
 
-main {
-    padding: 50px;
+.controls {
+    display: flex;
+    gap: 10px;
 }
 
-button {
+button, select {
+    padding: 10px;
     border: none;
-    padding: 8px 12px;
+    border-radius: 8px;
+    background: var(--button);
+    color: var(--text);
     cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+section {
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.list .project-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.list .project-item img {
+    width: 220px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
