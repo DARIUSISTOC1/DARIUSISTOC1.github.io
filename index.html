@@ -2,26 +2,59 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Darius - Accueil</title>
+    <title>Darius Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
-    <nav>
-        <h1>Darius</h1>
-        <div>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À propos</a>
-            <a href="projects.html">Projets</a>
-            <a href="contact.html">Contact</a>
+
+<nav>
+    <h1>Darius</h1>
+
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="controls">
+        <select id="language">
+            <option>FR</option>
+            <option>EN</option>
+        </select>
+
+        <button id="theme-toggle">B/W</button>
+    </div>
+</nav>
+
+<header class="hero">
+    <h2>Salut, moi c'est Darius</h2>
+    <p>Développeur passionné par les jeux vidéo, bots Discord et systèmes Roblox.</p>
+</header>
+
+<section>
+    <h2>Mes projets récents</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150">
+            <h3>Bot Discord</h3>
+            <p>Gestion de rôles automatique.</p>
         </div>
-        <button id="theme-toggle">🌙</button>
-    </nav>
 
-    <main>
-        <h2>Bienvenue</h2>
-        <p>Bienvenue sur mon portfolio et site personnel.</p>
-    </main>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150">
+            <h3>Tycoon Roblox</h3>
+            <p>Système économique et achats.</p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150">
+            <h3>UI Cartes</h3>
+            <p>Interface de jeu custom.</p>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
