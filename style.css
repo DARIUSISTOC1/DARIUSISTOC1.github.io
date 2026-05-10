@@ -1,0 +1,42 @@
+:root {
+    --bg: white;
+    --text: black;
+    --nav: #f0f0f0;
+}
+
+body.dark {
+    --bg: #111827;
+    --text: white;
+    --nav: #1f2937;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: Arial;
+}
+
+nav {
+    background: var(--nav);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+main {
+    padding: 50px;
+}
+
+button {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
