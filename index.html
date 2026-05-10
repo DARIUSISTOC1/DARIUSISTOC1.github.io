@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darius - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="dark">
 
@@ -12,19 +12,21 @@
     <a href="index.html" class="nav-logo">Darius</a>
     <div class="nav-links">
         <a href="index.html" class="active">Accueil</a>
-        <a href="#projets">Projets</a>
+        <a href="projects.html">Projets</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
     <div class="hero-content">
         <h1>Salut, moi c'est<br><span>Darius</span> 👋</h1>
-        <p class="hero-sub">Développeur autodidacte • Jeux vidéo • Discord • Roblox • UI</p>
-        <a href="#projets" class="btn-primary">Voir mes projets</a>
+        <p class="hero-sub">Développeur autodidacte &bull; Jeux vidéo &bull; Discord &bull; Roblox &bull; UI</p>
+        <a href="projects.html" class="btn-primary">Voir mes projets</a>
     </div>
 </header>
 
+<!-- FEATURES -->
 <section class="features">
     <div class="feature-card">
         <div class="feature-icon">🎮</div>
@@ -33,8 +35,8 @@
     </div>
     <div class="feature-card">
         <div class="feature-icon">🤖</div>
-        <h3>Bots Discord</h3>
-        <p>Automatisation, gestion de rôles et commandes sur mesure.</p>
+        <h3>Bots & Scripts</h3>
+        <p>Automatisation, bots Discord, outils Windows sur mesure.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">🎨</div>
@@ -43,45 +45,86 @@
     </div>
 </section>
 
-<section class="projects-home" id="projets">
-    <h2>Mes projets</h2>
+<!-- PROJETS RÉCENTS -->
+<section class="section-wrap">
+    <h2>Projets récents</h2>
     <p class="section-sub">Quelques trucs sur lesquels j'ai bossé</p>
     <div class="grid">
+
+        <a href="assistant-jarvis.html" class="card">
+            <img src="img/assistant-jarvis.jpg" alt="Assistant IA" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Assistant+IA'">
+            <div class="card-body">
+                <h3>Assistant IA (style Jarvis)</h3>
+                <p>Assistant vocal et textuel avec personnalité, inspiré de Jarvis d'Iron Man.</p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">IA</span>
+                    <span class="tag">Assistant</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="brainrot-arena.html" class="card">
+            <img src="img/brainrot-arena.jpg" alt="Brainrot Physics Arena" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Brainrot+Arena'">
+            <div class="card-body">
+                <h3>Brainrot Physics Arena</h3>
+                <p>Jeu de physique multijoueur chaotique en Unity, optimisé pour le bas de gamme.</p>
+                <div class="card-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Multijoueur</span>
+                </div>
+            </div>
+        </a>
+
         <a href="bot-discord.html" class="card">
-            <img src="img/bot-discord.jpg" alt="Bot Discord" onerror="this.src='https://via.placeholder.com/500x250/1b1b1d/7c5cff?text=Bot+Discord'">
+            <img src="img/bot-discord.jpg" alt="Bot Discord" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Bot+Discord'">
             <div class="card-body">
                 <h3>Bot Discord</h3>
-                <p>Gestion de rôles automatique et commandes avancées.</p>
+                <p>Gestion de rôles automatique et commandes avancées pour serveur Discord.</p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">discord.py</span>
+                    <span class="tag">Bot</span>
+                </div>
             </div>
         </a>
-        <a href="tycoon-roblox.html" class="card">
-            <img src="img/tycoon-roblox.jpg" alt="Tycoon Roblox" onerror="this.src='https://via.placeholder.com/500x250/1b1b1d/7c5cff?text=Tycoon+Roblox'">
-            <div class="card-body">
-                <h3>Tycoon Roblox</h3>
-                <p>Système d'argent, upgrades et progression joueur.</p>
-            </div>
-        </a>
-        <a href="ui-cards.html" class="card">
-            <img src="img/ui-cards.jpg" alt="UI Cards System" onerror="this.src='https://via.placeholder.com/500x250/1b1b1d/7c5cff?text=UI+Cards'">
-            <div class="card-body">
-                <h3>UI Cards System</h3>
-                <p>Interface type jeu de cartes personnalisée.</p>
-            </div>
-        </a>
+
+    </div>
+    <div style="text-align:center; margin-top:36px;">
+        <a href="projects.html" class="btn-outline">Voir tous les projets →</a>
     </div>
 </section>
 
-<section class="intro" id="contact">
-    <div class="intro-inner">
+<!-- COMPÉTENCES -->
+<section class="section-wrap" style="padding-top:0;">
+    <h2>Compétences</h2>
+    <p class="section-sub">Ce avec quoi je travaille</p>
+    <div class="skills-grid">
+        <div class="skill-pill"><span>🐍</span> Python</div>
+        <div class="skill-pill"><span>🎮</span> Lua / Roblox</div>
+        <div class="skill-pill"><span>⚡</span> C# / Unity</div>
+        <div class="skill-pill"><span>🌐</span> HTML / CSS / JS</div>
+        <div class="skill-pill"><span>🤖</span> discord.py</div>
+        <div class="skill-pill"><span>🖥️</span> Batch / PowerShell</div>
+        <div class="skill-pill"><span>🎨</span> UI Design</div>
+        <div class="skill-pill"><span>🔧</span> Git / GitHub</div>
+    </div>
+</section>
+
+<!-- ABOUT / CONTACT -->
+<section class="about-wrap" id="contact">
+    <div class="about-inner">
         <h2>À propos</h2>
-        <p>Je suis en Seconde, passionné de prog depuis un moment. Je crée des trucs qui m'intéressent : des jeux, des bots, des interfaces. Tout est fait en autodidacte.</p>
-        <p style="font-family:'Space Mono',monospace; font-size:0.82rem;">GitHub : DARIUSISTOC1</p>
-        <a href="https://github.com/DARIUSISTOC1" class="btn-outline" target="_blank">Voir GitHub →</a>
+        <p>Je suis en Seconde, passionné de prog depuis plusieurs années. Je crée des trucs qui m'intéressent : des jeux, des bots, des interfaces. Tout est fait en autodidacte.</p>
+        <p style="font-family:'Space Mono',monospace; font-size:0.8rem; margin-bottom:24px;">GitHub : DARIUSISTOC1</p>
+        <a href="https://github.com/DARIUSISTOC1" class="btn-outline" target="_blank" rel="noopener">Voir GitHub →</a>
     </div>
 </section>
 
 <footer>
     <p>© 2026 Darius</p>
 </footer>
+
 </body>
 </html>
