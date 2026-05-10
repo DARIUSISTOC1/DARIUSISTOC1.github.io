@@ -2,50 +2,171 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Projets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Darius</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
 
 <nav>
-    <h1>Darius</h1>
+    <a href="index.html" class="nav-logo">Darius</a>
     <div class="nav-links">
         <a href="index.html">Accueil</a>
-        <a href="projects.html">Projets</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-    <div class="controls">
-        <button id="list-view">Liste</button>
-        <button id="grid-view">Grille</button>
-        <button id="theme-toggle">B/W</button>
+        <a href="projects.html" class="active">Projets</a>
+        <a href="index.html#contact">Contact</a>
     </div>
 </nav>
 
-<section>
-    <h2>Mes projets</h2>
+<section class="section-wrap">
+    <h2>Tous mes projets</h2>
+    <p class="section-sub">6 projets — cherche ou filtre par technologie</p>
 
-    <input type="text" id="search" placeholder="Rechercher un projet...">
+    <!-- RECHERCHE -->
+    <input type="text" id="search" class="search-bar" placeholder="🔍  Rechercher un projet...">
 
-    <div id="projects-container" class="grid">
-        <div class="card project-item">
-            <img src="https://via.placeholder.com/300x150">
-            <div>
-                <h3>Bot Discord</h3>
-                <p>Bot gestion rôles.</p>
-            </div>
-        </div>
-
-        <div class="card project-item">
-            <img src="https://via.placeholder.com/300x150">
-            <div>
-                <h3>Tycoon Roblox</h3>
-                <p>Système économique.</p>
-            </div>
-        </div>
+    <!-- FILTRES PAR TAG -->
+    <div class="filter-tags" id="filter-tags">
+        <span class="tag active" data-filter="all">Tous</span>
+        <span class="tag" data-filter="Python">Python</span>
+        <span class="tag" data-filter="discord.py">discord.py</span>
+        <span class="tag" data-filter="Automatisation">Automatisation</span>
+        <span class="tag" data-filter="Bot">Bot</span>
+        <span class="tag" data-filter="Roblox">Roblox</span>
+        <span class="tag" data-filter="Lua">Lua</span>
+        <span class="tag" data-filter="Unity">Unity</span>
+        <span class="tag" data-filter="C#">C#</span>
+        <span class="tag" data-filter="IA">IA</span>
+        <span class="tag" data-filter="UI Design">UI Design</span>
+        <span class="tag" data-filter="Batch">Batch</span>
+        <span class="tag" data-filter="Windows">Windows</span>
     </div>
+
+    <!-- GRILLE PROJETS -->
+    <div class="grid" id="projects-grid">
+
+        <a href="assistant-jarvis.html" class="card project-item" data-tags="Python IA Assistant">
+            <img src="img/assistant-jarvis.jpg" alt="Assistant IA" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Assistant+IA'">
+            <div class="card-body">
+                <h3>Assistant IA (style Jarvis)</h3>
+                <p>Assistant avec personnalité, inspiré de Jarvis d'Iron Man.</p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">IA</span>
+                    <span class="tag">Assistant</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="brainrot-arena.html" class="card project-item" data-tags="Unity C# Multijoueur Game Design">
+            <img src="img/brainrot-arena.jpg" alt="Brainrot Physics Arena" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Brainrot+Arena'">
+            <div class="card-body">
+                <h3>Brainrot Physics Arena</h3>
+                <p>Jeu de physique multijoueur chaotique en Unity.</p>
+                <div class="card-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Multijoueur</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="bot-discord.html" class="card project-item" data-tags="Python discord.py Automatisation Bot">
+            <img src="img/bot-discord.jpg" alt="Bot Discord" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Bot+Discord'">
+            <div class="card-body">
+                <h3>Bot Discord</h3>
+                <p>Gestion de rôles automatique et commandes avancées.</p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">discord.py</span>
+                    <span class="tag">Automatisation</span>
+                    <span class="tag">Bot</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="tycoon-roblox.html" class="card project-item" data-tags="Roblox Lua Game Design">
+            <img src="img/tycoon-roblox.jpg" alt="Tycoon Roblox" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Tycoon+Roblox'">
+            <div class="card-body">
+                <h3>Tycoon Roblox</h3>
+                <p>Système d'argent, upgrades et progression joueur.</p>
+                <div class="card-tags">
+                    <span class="tag">Roblox</span>
+                    <span class="tag">Lua</span>
+                    <span class="tag">Game Design</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="ui-cards.html" class="card project-item" data-tags="UI Design Game UI">
+            <img src="img/ui-cards.jpg" alt="UI Cards System" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=UI+Cards'">
+            <div class="card-body">
+                <h3>UI Cards System</h3>
+                <p>Interface type jeu de cartes avec raretés et stats.</p>
+                <div class="card-tags">
+                    <span class="tag">UI Design</span>
+                    <span class="tag">Game UI</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="cmd-menu.html" class="card project-item" data-tags="Batch Windows PowerShell Automatisation">
+            <img src="img/cmd-menu.jpg" alt="CMD-MENUv2" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=CMD-MENUv2'">
+            <div class="card-body">
+                <h3>CMD-MENUv2</h3>
+                <p>Menu Windows batch inspiré de WinUtil avec outils, mini-jeux et tweaks système.</p>
+                <div class="card-tags">
+                    <span class="tag">Batch</span>
+                    <span class="tag">Windows</span>
+                    <span class="tag">PowerShell</span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <p id="no-results">Aucun projet trouvé pour cette recherche.</p>
 </section>
 
-<script src="script.js"></script>
+<footer>
+    <p>© 2026 Darius</p>
+</footer>
+
+<script>
+    const search = document.getElementById('search');
+    const items = document.querySelectorAll('.project-item');
+    const noResults = document.getElementById('no-results');
+    const filterTags = document.querySelectorAll('#filter-tags .tag');
+    let activeFilter = 'all';
+
+    function applyFilters() {
+        const query = search.value.toLowerCase();
+        let visible = 0;
+        items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            const tags = item.dataset.tags || '';
+            const matchSearch = text.includes(query);
+            const matchFilter = activeFilter === 'all' || tags.includes(activeFilter);
+            if (matchSearch && matchFilter) {
+                item.style.display = '';
+                visible++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    search.addEventListener('input', applyFilters);
+
+    filterTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            filterTags.forEach(t => t.classList.remove('active'));
+            tag.classList.add('active');
+            activeFilter = tag.dataset.filter;
+            applyFilters();
+        });
+    });
+</script>
+
 </body>
 </html>
