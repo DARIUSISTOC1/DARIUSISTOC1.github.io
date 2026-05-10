@@ -2,95 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darius</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #12121c);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-
-        .window {
-            width: 700px;
-            max-width: 90%;
-            background: #222;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            overflow: hidden;
-        }
-
-        .titlebar {
-            background: #333;
-            padding: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .red { background: #ff5f56; }
-        .yellow { background: #ffbd2e; }
-        .green { background: #27c93f; }
-
-        .content {
-            padding: 40px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #bdbdbd;
-            font-size: 1.1rem;
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            background: #5865f2;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        button:hover {
-            background: #4752c4;
-        }
-    </style>
+    <title>Darius - Accueil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <div class="window">
-        <div class="titlebar">
-            <div class="dot red"></div>
-            <div class="dot yellow"></div>
-            <div class="dot green"></div>
+<body class="dark">
+    <nav>
+        <h1>Darius</h1>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="projects.html">Projets</a>
+            <a href="contact.html">Contact</a>
         </div>
+        <button id="theme-toggle">🌙</button>
+    </nav>
 
-        <div class="content">
-            <h1>Salut, moi c'est Darius</h1>
-            <p>Bienvenue sur mon site personnel</p>
-            <button onclick="alert('Merci de visiter mon site !')">Clique ici</button>
-        </div>
-    </div>
+    <main>
+        <h2>Bienvenue</h2>
+        <p>Bienvenue sur mon portfolio et site personnel.</p>
+    </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
