@@ -15,158 +15,259 @@
         <a href="projects.html" class="active">Projets</a>
         <a href="index.html#contact">Contact</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="projects.html" class="active">Projets</a>
+    <a href="index.html#contact">Contact</a>
+</div>
 
 <section class="section-wrap">
     <h2>Tous mes projets</h2>
-    <p class="section-sub">6 projets — cherche ou filtre par technologie</p>
+    <p class="section-sub">Combine les filtres ou utilise la recherche — 6 projets</p>
 
     <!-- RECHERCHE -->
     <input type="text" id="search" class="search-bar" placeholder="🔍  Rechercher un projet...">
 
-    <!-- FILTRES PAR TAG -->
-    <div class="filter-tags" id="filter-tags">
-        <span class="tag active" data-filter="all">Tous</span>
-        <span class="tag" data-filter="Python">Python</span>
-        <span class="tag" data-filter="discord.py">discord.py</span>
-        <span class="tag" data-filter="Automatisation">Automatisation</span>
-        <span class="tag" data-filter="Bot">Bot</span>
-        <span class="tag" data-filter="Roblox">Roblox</span>
-        <span class="tag" data-filter="Lua">Lua</span>
-        <span class="tag" data-filter="Unity">Unity</span>
-        <span class="tag" data-filter="C#">C#</span>
-        <span class="tag" data-filter="IA">IA</span>
-        <span class="tag" data-filter="UI Design">UI Design</span>
-        <span class="tag" data-filter="Batch">Batch</span>
-        <span class="tag" data-filter="Windows">Windows</span>
+    <!-- GROUPE : Langage -->
+    <div class="filter-group">
+        <div class="filter-group-label">Langage / Tech</div>
+        <div class="filter-row">
+            <span class="tag filter-tag" data-filter="Python">Python</span>
+            <span class="tag filter-tag" data-filter="discord.py">discord.py</span>
+            <span class="tag filter-tag" data-filter="Lua">Lua</span>
+            <span class="tag filter-tag" data-filter="C#">C#</span>
+            <span class="tag filter-tag" data-filter="Batch">Batch</span>
+            <span class="tag filter-tag" data-filter="PowerShell">PowerShell</span>
+        </div>
     </div>
 
-    <!-- GRILLE PROJETS -->
+    <!-- GROUPE : Plateforme -->
+    <div class="filter-group">
+        <div class="filter-group-label">Plateforme / Outil</div>
+        <div class="filter-row">
+            <span class="tag filter-tag" data-filter="Unity">Unity</span>
+            <span class="tag filter-tag" data-filter="Roblox">Roblox</span>
+            <span class="tag filter-tag" data-filter="Discord">Discord</span>
+            <span class="tag filter-tag" data-filter="Windows">Windows</span>
+        </div>
+    </div>
+
+    <!-- GROUPE : Type -->
+    <div class="filter-group">
+        <div class="filter-group-label">Type de projet</div>
+        <div class="filter-row">
+            <span class="tag filter-tag" data-filter="Jeu vidéo">Jeu vidéo</span>
+            <span class="tag filter-tag" data-filter="Bot">Bot</span>
+            <span class="tag filter-tag" data-filter="Automatisation">Automatisation</span>
+            <span class="tag filter-tag" data-filter="IA">IA</span>
+            <span class="tag filter-tag" data-filter="UI Design">UI Design</span>
+            <span class="tag filter-tag" data-filter="Outil">Outil</span>
+            <span class="tag filter-tag" data-filter="Multijoueur">Multijoueur</span>
+        </div>
+    </div>
+
+    <!-- GROUPE : Contexte -->
+    <div class="filter-group">
+        <div class="filter-group-label">Contexte</div>
+        <div class="filter-row">
+            <span class="tag filter-tag" data-filter="Solo">Solo</span>
+            <span class="tag filter-tag" data-filter="Équipe">Équipe</span>
+            <span class="tag filter-tag" data-filter="En cours">En cours</span>
+            <span class="tag filter-tag" data-filter="Terminé">Terminé</span>
+        </div>
+    </div>
+
+    <!-- RÉSUMÉ + RESET -->
+    <div class="filter-summary">
+        <span id="summary-text">Tous les projets affichés</span>
+        <button class="reset-btn" id="reset-btn" style="display:none;">✕ Tout réinitialiser</button>
+    </div>
+
+    <!-- GRILLE -->
     <div class="grid" id="projects-grid">
 
-        <a href="assistant-jarvis.html" class="card project-item" data-tags="Python IA Assistant">
-            <img src="img/assistant-jarvis.jpg" alt="Assistant IA" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Assistant+IA'">
+        <a href="assistant-jarvis.html" class="card project-item"
+           data-tags="Python IA Assistant Solo En cours">
+            <img src="img/assistant-jarvis.jpg" alt="Assistant IA"
+                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Assistant+IA'">
             <div class="card-body">
                 <h3>Assistant IA (style Jarvis)</h3>
                 <p>Assistant avec personnalité, inspiré de Jarvis d'Iron Man.</p>
                 <div class="card-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">IA</span>
-                    <span class="tag">Assistant</span>
+                    <span class="tag">Python</span><span class="tag">IA</span>
+                    <span class="tag">Solo</span><span class="tag">En cours</span>
                 </div>
             </div>
         </a>
 
-        <a href="brainrot-arena.html" class="card project-item" data-tags="Unity C# Multijoueur Game Design">
-            <img src="img/brainrot-arena.jpg" alt="Brainrot Physics Arena" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Brainrot+Arena'">
+        <a href="brainrot-arena.html" class="card project-item"
+           data-tags="Unity C# Multijoueur Jeu vidéo Équipe En cours">
+            <img src="img/brainrot-arena.jpg" alt="Brainrot Physics Arena"
+                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Brainrot+Arena'">
             <div class="card-body">
                 <h3>Brainrot Physics Arena</h3>
                 <p>Jeu de physique multijoueur chaotique en Unity.</p>
                 <div class="card-tags">
-                    <span class="tag">Unity</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">Multijoueur</span>
+                    <span class="tag">Unity</span><span class="tag">C#</span>
+                    <span class="tag">Multijoueur</span><span class="tag">Équipe</span>
                 </div>
             </div>
         </a>
 
-        <a href="bot-discord.html" class="card project-item" data-tags="Python discord.py Automatisation Bot">
-            <img src="img/bot-discord.jpg" alt="Bot Discord" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Bot+Discord'">
+        <a href="bot-discord.html" class="card project-item"
+           data-tags="Python discord.py Automatisation Bot Discord Solo Terminé">
+            <img src="img/bot-discord.jpg" alt="Bot Discord"
+                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Bot+Discord'">
             <div class="card-body">
                 <h3>Bot Discord</h3>
                 <p>Gestion de rôles automatique et commandes avancées.</p>
                 <div class="card-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">discord.py</span>
-                    <span class="tag">Automatisation</span>
-                    <span class="tag">Bot</span>
+                    <span class="tag">Python</span><span class="tag">discord.py</span>
+                    <span class="tag">Automatisation</span><span class="tag">Bot</span>
                 </div>
             </div>
         </a>
 
-        <a href="tycoon-roblox.html" class="card project-item" data-tags="Roblox Lua Game Design">
-            <img src="img/tycoon-roblox.jpg" alt="Tycoon Roblox" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Tycoon+Roblox'">
+        <a href="tycoon-roblox.html" class="card project-item"
+           data-tags="Roblox Lua Jeu vidéo Solo Terminé">
+            <img src="img/tycoon-roblox.jpg" alt="Tycoon Roblox"
+                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Tycoon+Roblox'">
             <div class="card-body">
                 <h3>Tycoon Roblox</h3>
                 <p>Système d'argent, upgrades et progression joueur.</p>
                 <div class="card-tags">
-                    <span class="tag">Roblox</span>
-                    <span class="tag">Lua</span>
-                    <span class="tag">Game Design</span>
+                    <span class="tag">Roblox</span><span class="tag">Lua</span>
+                    <span class="tag">Jeu vidéo</span><span class="tag">Solo</span>
                 </div>
             </div>
         </a>
 
-        <a href="ui-cards.html" class="card project-item" data-tags="UI Design Game UI">
-            <img src="img/ui-cards.jpg" alt="UI Cards System" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=UI+Cards'">
+        <a href="ui-cards.html" class="card project-item"
+           data-tags="UI Design Jeu vidéo Solo Terminé">
+            <img src="img/ui-cards.jpg" alt="UI Cards System"
+                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=UI+Cards'">
             <div class="card-body">
                 <h3>UI Cards System</h3>
                 <p>Interface type jeu de cartes avec raretés et stats.</p>
                 <div class="card-tags">
-                    <span class="tag">UI Design</span>
-                    <span class="tag">Game UI</span>
+                    <span class="tag">UI Design</span><span class="tag">Jeu vidéo</span>
+                    <span class="tag">Solo</span>
                 </div>
             </div>
         </a>
 
-        <a href="cmd-menu.html" class="card project-item" data-tags="Batch Windows PowerShell Automatisation">
-            <img src="img/cmd-menu.jpg" alt="CMD-MENUv2" onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=CMD-MENUv2'">
+        <a href="cmd-menu.html" class="card project-item"
+           data-tags="Batch Windows PowerShell Python Automatisation Outil Solo En cours">
+            <img src="img/cmd-menu.jpg" alt="CMD-MENUv2"
+                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=CMD-MENUv2'">
             <div class="card-body">
                 <h3>CMD-MENUv2</h3>
-                <p>Menu Windows batch inspiré de WinUtil avec outils, mini-jeux et tweaks système.</p>
+                <p>Menu Windows batch avec outils, mini-jeux et tweaks système.</p>
                 <div class="card-tags">
-                    <span class="tag">Batch</span>
-                    <span class="tag">Windows</span>
-                    <span class="tag">PowerShell</span>
+                    <span class="tag">Batch</span><span class="tag">Windows</span>
+                    <span class="tag">PowerShell</span><span class="tag">Outil</span>
                 </div>
             </div>
         </a>
 
     </div>
 
-    <p id="no-results">Aucun projet trouvé pour cette recherche.</p>
+    <p id="no-results" style="display:none; text-align:center; padding:50px 0; color:var(--muted); font-size:.95rem;">
+        Aucun projet ne correspond à ces filtres.
+    </p>
 </section>
 
-<footer>
-    <p>© 2026 Darius</p>
-</footer>
+<footer><p>© 2026 Darius</p></footer>
 
 <script>
-    const search = document.getElementById('search');
-    const items = document.querySelectorAll('.project-item');
-    const noResults = document.getElementById('no-results');
-    const filterTags = document.querySelectorAll('#filter-tags .tag');
-    let activeFilter = 'all';
+    // ── Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    }));
+
+    // ── Filter logic
+    const searchInput  = document.getElementById('search');
+    const items        = document.querySelectorAll('.project-item');
+    const noResults    = document.getElementById('no-results');
+    const filterTags   = document.querySelectorAll('.filter-tag');
+    const resetBtn     = document.getElementById('reset-btn');
+    const summaryText  = document.getElementById('summary-text');
+
+    let activeFilters = new Set();
 
     function applyFilters() {
-        const query = search.value.toLowerCase();
+        const query = searchInput.value.toLowerCase().trim();
         let visible = 0;
+
         items.forEach(item => {
             const text = item.textContent.toLowerCase();
             const tags = item.dataset.tags || '';
-            const matchSearch = text.includes(query);
-            const matchFilter = activeFilter === 'all' || tags.includes(activeFilter);
-            if (matchSearch && matchFilter) {
-                item.style.display = '';
-                visible++;
-            } else {
-                item.style.display = 'none';
-            }
-        });
-        noResults.style.display = visible === 0 ? 'block' : 'none';
-    }
 
-    search.addEventListener('input', applyFilters);
+            const matchSearch = query === '' || text.includes(query);
+            // AND logic : item must match every active filter
+            const matchFilter = activeFilters.size === 0 ||
+                [...activeFilters].every(f => tags.includes(f));
+
+            const show = matchSearch && matchFilter;
+            item.style.display = show ? '' : 'none';
+            if (show) visible++;
+        });
+
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+
+        // Summary text
+        const hasFilters = activeFilters.size > 0 || query !== '';
+        if (!hasFilters) {
+            summaryText.textContent = 'Tous les projets affichés';
+        } else {
+            const parts = [];
+            if (activeFilters.size > 0)
+                parts.push([...activeFilters].join(' + '));
+            if (query)
+                parts.push(`"${query}"`);
+            summaryText.textContent =
+                `Filtres : ${parts.join(' & ')}  —  ${visible} projet${visible !== 1 ? 's' : ''}`;
+        }
+
+        resetBtn.style.display = hasFilters ? 'inline-block' : 'none';
+    }
 
     filterTags.forEach(tag => {
         tag.addEventListener('click', () => {
-            filterTags.forEach(t => t.classList.remove('active'));
-            tag.classList.add('active');
-            activeFilter = tag.dataset.filter;
+            const f = tag.dataset.filter;
+            if (activeFilters.has(f)) {
+                activeFilters.delete(f);
+                tag.classList.remove('active');
+            } else {
+                activeFilters.add(f);
+                tag.classList.add('active');
+            }
+            // If all filters were deactivated → back to "all" automatically
             applyFilters();
         });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+
+    resetBtn.addEventListener('click', () => {
+        activeFilters.clear();
+        filterTags.forEach(t => t.classList.remove('active'));
+        searchInput.value = '';
+        applyFilters();
     });
 </script>
 
 </body>
 </html>
+
