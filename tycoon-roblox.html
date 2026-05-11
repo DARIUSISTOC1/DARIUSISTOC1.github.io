@@ -12,20 +12,17 @@
     <div class="nav-links">
         <a href="index.html">Accueil</a>
         <a href="projects.html" class="active">Projets</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="project-hero">
-    <a href="projects.html" class="back-link">← Retour aux projets</a>
-    <h1>Tycoon <span>Roblox</span></h1>
-    <p class="project-desc">Un jeu de type tycoon créé sur Roblox Studio en Lua. Le joueur gère une économie, débloque des upgrades et progresse à travers des paliers de jeu.</p>
-    <div class="tags">
-        <span class="tag">Roblox</span>
-        <span class="tag">Lua</span>
-        <span class="tag">Game Design</span>
-    </div>
-    <img src="img/tycoon-roblox.jpg" alt="Tycoon Roblox" class="project-img-main" onerror="this.onerror=null;this.src='https://placehold.co/900x420/1b1b1d/7c5cff?text=Tycoon+Roblox'">
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="projects.html" class="active">Projets</a>
+    <a href="contact.html">Contact</a>
 </div>
+<div class="project-hero" id="project-header"></div>
+<div id="project-carousel" style="padding:0 6%;max-width:960px;margin:0 auto;"></div>
 <div class="project-content">
     <h2>Concept</h2>
     <p>Le joueur commence avec un terrain vide et génère de l'argent en construisant des structures. Chaque upgrade débloque de nouveaux bâtiments et augmente les revenus passifs.</p>
@@ -33,11 +30,15 @@
     <ul>
         <li>Système d'argent avec revenus passifs</li>
         <li>Arbre d'upgrades et de débloquage</li>
-        <li>Sauvegarde de la progression joueur (DataStore)</li>
+        <li>Sauvegarde de progression (DataStore)</li>
         <li>Interface utilisateur in-game</li>
     </ul>
     <h2>Ce que j'ai appris</h2>
+    <p>Game design, DataStore Roblox, communication Client-Serveur via RemoteEvents.</p>
 </div>
 <footer><p>© 2026 Darius</p></footer>
+<script src="projects-data.js"></script>
+<script src="ui.js"></script>
+<script>renderProjectPage("tycoon-roblox");</script>
 </body>
 </html>

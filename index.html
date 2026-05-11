@@ -8,25 +8,21 @@
 </head>
 <body class="dark">
 
-<!-- NAV -->
 <nav>
     <a href="index.html" class="nav-logo">Darius</a>
     <div class="nav-links">
         <a href="index.html" class="active">Accueil</a>
         <a href="projects.html">Projets</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
     <a href="index.html" class="active">Accueil</a>
     <a href="projects.html">Projets</a>
-    <a href="#contact">Contact</a>
+    <a href="contact.html">Contact</a>
 </div>
 
-<!-- HERO -->
 <header class="hero">
     <div class="hero-content">
         <h1>Salut, moi c'est<br><span>Darius</span> 👋</h1>
@@ -35,55 +31,11 @@
     </div>
 </header>
 
-<!-- PROJETS RÉCENTS -->
-<section class="section-wrap" id="projets">
+<!-- PROJETS RÉCENTS (3 aléatoires, chargés depuis projects-data.js) -->
+<section class="section-wrap">
     <h2>Projets récents</h2>
-    <p class="section-sub">Quelques trucs sur lesquels j'ai bossé</p>
-    <div class="grid">
-
-        <a href="assistant-jarvis.html" class="card">
-            <img src="img/assistant-jarvis.jpg" alt="Assistant IA"
-                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Assistant+IA'">
-            <div class="card-body">
-                <h3>Assistant IA (style Jarvis)</h3>
-                <p>Assistant avec personnalité, inspiré de Jarvis d'Iron Man.</p>
-                <div class="card-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">IA</span>
-                    <span class="tag">En cours</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="brainrot-arena.html" class="card">
-            <img src="img/brainrot-arena.jpg" alt="Brainrot Physics Arena"
-                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Brainrot+Arena'">
-            <div class="card-body">
-                <h3>Brainrot Physics Arena</h3>
-                <p>Jeu de physique multijoueur chaotique en Unity.</p>
-                <div class="card-tags">
-                    <span class="tag">Unity</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">Équipe</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="bot-discord.html" class="card">
-            <img src="img/bot-discord.jpg" alt="Bot Discord"
-                 onerror="this.onerror=null;this.src='https://placehold.co/500x160/1b1b1d/7c5cff?text=Bot+Discord'">
-            <div class="card-body">
-                <h3>Bot Discord</h3>
-                <p>Gestion de rôles automatique et commandes avancées.</p>
-                <div class="card-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">discord.py</span>
-                    <span class="tag">Bot</span>
-                </div>
-            </div>
-        </a>
-
-    </div>
+    <p class="section-sub">Une sélection au hasard parmi mes projets</p>
+    <div class="grid" id="home-projects-grid"></div>
     <div style="text-align:center; margin-top:34px;">
         <a href="projects.html" class="btn-outline">Voir tous les projets →</a>
     </div>
@@ -97,63 +49,47 @@
         <div class="feature-card">
             <div class="feature-icon">🎮</div>
             <h3>Game Dev</h3>
-            <p>Je construis des jeux et systèmes de jeu, de Roblox à Unity — physique, multijoueur, progression joueur.</p>
+            <p>Jeux et systèmes de jeu, de Roblox à Unity — physique, multijoueur, progression joueur.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">🤖</div>
             <h3>Bots &amp; Scripts</h3>
-            <p>Automatisation, bots Discord, outils Windows sur mesure. J'aime que les trucs se fassent tout seuls.</p>
+            <p>Automatisation, bots Discord, outils Windows. J'aime que les trucs se fassent tout seuls.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">🎨</div>
-            <h3>UI &amp; Interfaces</h3>
-            <p>J'aime créer des interfaces propres et des systèmes visuels cohérents — web, jeux ou outils.</p>
+            <div class="feature-icon">🔧</div>
+            <h3>Outils &amp; Firmware</h3>
+            <p>Firmware embarqué, outils système, scripts utilitaires. J'aime bidouiller à bas niveau.</p>
         </div>
     </div>
 
-    <!-- COMPÉTENCES -->
     <h2 style="margin-bottom:6px;">Compétences</h2>
     <p class="section-sub">Ce avec quoi je travaille</p>
     <div class="skills-grid">
-        <div class="skill-pill"><span></span> Python</div>
-        <div class="skill-pill"><span></span> Lua / Roblox</div>
-        <div class="skill-pill"><span></span> C# / Unity</div>
-        <div class="skill-pill"><span></span> HTML / CSS / JS</div>
-        <div class="skill-pill"><span></span> discord.py</div>
-        <div class="skill-pill"><span></span> Batch / PowerShell</div>
-        <div class="skill-pill"><span></span> UI Design</div>
-        <div class="skill-pill"><span></span> Git / GitHub</div>
+        <div class="skill-pill"><span>🐍</span> Python</div>
+        <div class="skill-pill"><span>🎮</span> Lua / Roblox</div>
+        <div class="skill-pill"><span>⚡</span> C# / Unity</div>
+        <div class="skill-pill"><span>🌐</span> HTML / CSS / JS</div>
+        <div class="skill-pill"><span>💬</span> Discord</div>
+        <div class="skill-pill"><span>🖥️</span> Batch</div>
+        <div class="skill-pill"><span>🔩</span> C / Firmware</div>
+        <div class="skill-pill"><span>🔧</span> Git / GitHub</div>
     </div>
 </section>
 
-<!-- ABOUT / CONTACT -->
-<section class="about-wrap" id="contact">
+<!-- À PROPOS + CTA CONTACT -->
+<section class="about-wrap">
     <div class="about-inner">
         <h2>À propos</h2>
         <p>Je suis en Seconde, passionné de prog depuis plusieurs années. Je crée des trucs qui m'intéressent : des jeux, des bots, des interfaces. Tout en autodidacte.</p>
-        <p style="font-family:'Space Mono',monospace; font-size:.8rem; margin-bottom:24px;">GitHub : DARIUSISTOC1</p>
-        <a href="https://github.com/DARIUSISTOC1" class="btn-outline" target="_blank" rel="noopener">Voir GitHub →</a>
+        <a href="contact.html" class="btn-outline">Me contacter →</a>
     </div>
 </section>
 
 <footer><p>© 2026 Darius</p></footer>
 
-<script>
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        mobileMenu.classList.toggle('open');
-    });
-    // Close on link click
-    mobileMenu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            mobileMenu.classList.remove('open');
-        });
-    });
-</script>
-
+<script src="projects-data.js"></script>
+<script src="ui.js"></script>
+<script>renderHomeCards('home-projects-grid');</script>
 </body>
 </html>

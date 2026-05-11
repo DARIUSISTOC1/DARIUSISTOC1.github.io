@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire Élèves - Darius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<nav>
+    <a href="index.html" class="nav-logo">Darius</a>
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="projects.html" class="active">Projets</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- En-tête projet auto-généré depuis projects-data.js -->
+<div class="project-hero" id="project-header"></div>
+
+<!-- App annuaire -->
+<section class="section-wrap" style="padding-top:0;">
+    <h2 style="margin-bottom:6px;">📋 Annuaire</h2>
+    <p class="section-sub">Remplace <code style="font-family:'Space Mono',monospace;color:var(--accent2);">students.json</code> avec tes vraies données</p>
+
+    <input type="text" id="dict-search" class="dict-search" placeholder="🔍  Nom, prénom, classe...">
+    <div id="class-filters" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;"></div>
+
+    <div style="overflow-x:auto;">
+        <table class="dict-table">
+            <thead>
+                <tr>
+                    <th>Prénom</th><th>Nom</th><th>Classe</th><th>Option</th>
+                </tr>
+            </thead>
+            <tbody id="dict-body"></tbody>
+        </table>
+    </div>
+    <p class="dict-empty" id="dict-empty">Aucun élève trouvé.</p>
+    <p id="dict-count" style="margin-top:14px;font-size:.8rem;color:var(--muted);font-family:'Space Mono',monospace;"></p>
+</section>
+
+<footer><p>© 2026 Darius</p></footer>
+
+<script src="projects-data.js"></script>
+<script src="ui.js"></script>
+<script>
+renderProjectPage("dictionnaire-eleves");
+
+let allStudents = [];
+let activeClass = 'all';
+
+fetch('students.json')
+    .then(r => r.json())
+    .then(data => { allStudents = data; buildClassFilters(data); renderTable(data); })
+    .catch(() => {
+        document.getElementById('dict-body').innerHTML =
+            '<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:30px;">Impossible de charger students.json</td></tr>';
+    });
+
+function buildClassFilters(data) {
+    const classes = ['all', ...new Set(data.map(s => s.classe))].sort();
+    const container = document.getElementById('class-filters');
+    classes.forEach(c => {
+        const btn = document.createElement('span');
+        btn.className = 'tag filter-tag' + (c === 'all' ? ' active' : '');
+        btn.textContent = c === 'all' ? 'Toutes' : c;
+        btn.addEventListener('click', () => {
+            activeClass = c;
+            document.querySelectorAll('#class-filters .filter-tag').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilters();
+        });
+        container.appendChild(btn);
+    });
+}
+
+function applyFilters() {
+    const q = document.getElementById('dict-search').value.toLowerCase().trim();
+    const filtered = allStudents.filter(s => {
+        const matchClass = activeClass === 'all' || s.classe === activeClass;
+        const matchSearch = q === '' || [s.prenom, s.nom, s.classe, s.option||''].some(v => v.toLowerCase().includes(q));
+        return matchClass && matchSearch;
+    });
+    renderTable(filtered);
+}
+
+function renderTable(data) {
+    const body = document.getElementById('dict-body');
+    const empty = document.getElementById('dict-empty');
+    const count = document.getElementById('dict-count');
+    if (!data.length) { body.innerHTML=''; empty.style.display='block'; count.textContent=''; return; }
+    empty.style.display = 'none';
+    count.textContent = `${data.length} élève${data.length>1?'s':''} affiché${data.length>1?'s':''}`;
+    body.innerHTML = [...data].sort((a,b)=>a.nom.localeCompare(b.nom)).map(s => `
+        <tr>
+            <td>${s.prenom}</td>
+            <td>${s.nom}</td>
+            <td><span class="class-badge">${s.classe}</span></td>
+            <td>${s.option||'—'}</td>
+        </tr>`).join('');
+}
+
+document.getElementById('dict-search').addEventListener('input', applyFilters);
+</script>
+</body>
+</html>

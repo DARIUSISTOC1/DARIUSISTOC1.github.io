@@ -12,33 +12,33 @@
     <div class="nav-links">
         <a href="index.html">Accueil</a>
         <a href="projects.html" class="active">Projets</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="project-hero">
-    <a href="projects.html" class="back-link">← Retour aux projets</a>
-    <h1>Bot <span>Discord</span></h1>
-    <p class="project-desc">Un bot Discord développé en Python avec discord.py pour gérer automatiquement les rôles, les commandes et les interactions au sein d'un serveur.</p>
-    <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">discord.py</span>
-        <span class="tag">Automatisation</span>
-        <span class="tag">Bot</span>
-    </div>
-    <img src="img/bot-discord.jpg" alt="Bot Discord" class="project-img-main" onerror="this.onerror=null;this.src='https://placehold.co/900x420/1b1b1d/7c5cff?text=Bot+Discord'">
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="projects.html" class="active">Projets</a>
+    <a href="contact.html">Contact</a>
 </div>
+<div class="project-hero" id="project-header"></div>
+<div id="project-carousel" style="padding:0 6%;max-width:960px;margin:0 auto;"></div>
 <div class="project-content">
     <h2>Ce que fait le bot</h2>
-    <p>Le bot permet de gérer automatiquement les rôles sur un serveur Discord. Il écoute des événements, répond à des commandes et effectue des actions sans intervention manuelle.</p>
+    <p>Le bot gère automatiquement les rôles sur un serveur Discord. Il écoute des événements, répond à des commandes et effectue des actions sans intervention.</p>
     <h2>Fonctionnalités</h2>
     <ul>
         <li>Attribution et suppression automatique de rôles</li>
-        <li>Commandes personnalisées slash ou préfixées</li>
-        <li>Système de logs des actions</li>
-        <li>Réponses conditionnelles selon le rôle de l'utilisateur</li>
+        <li>Commandes slash et préfixées personnalisées</li>
+        <li>Logs des actions du bot</li>
+        <li>Réponses conditionnelles selon le rôle</li>
     </ul>
     <h2>Ce que j'ai appris</h2>
+    <p>APIs REST, événements asynchrones en Python, architecture modulaire d'un bot.</p>
 </div>
 <footer><p>© 2026 Darius</p></footer>
+<script src="projects-data.js"></script>
+<script src="ui.js"></script>
+<script>renderProjectPage("bot-discord");</script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+[
+  { "prenom": "Alice",   "nom": "Martin",   "classe": "2nde A", "option": "Latin" },
+  { "prenom": "Baptiste","nom": "Dubois",   "classe": "2nde B", "option": "Arts plastiques" },
+  { "prenom": "Camille", "nom": "Bernard",  "classe": "2nde A", "option": "Informatique" },
+  { "prenom": "Dylan",   "nom": "Leroy",    "classe": "2nde C", "option": "Musique" },
+  { "prenom": "Emma",    "nom": "Moreau",   "classe": "2nde B", "option": "Latin" },
+  { "prenom": "Florian", "nom": "Simon",    "classe": "2nde A", "option": "Arts plastiques" },
+  { "prenom": "Gabriel", "nom": "Michel",   "classe": "2nde C", "option": "Informatique" },
+  { "prenom": "Hugo",    "nom": "Lefebvre", "classe": "2nde B", "option": "Sports" },
+  { "prenom": "Inès",    "nom": "Garcia",   "classe": "2nde A", "option": "Musique" },
+  { "prenom": "Jules",   "nom": "David",    "classe": "2nde C", "option": "Latin" }
+]

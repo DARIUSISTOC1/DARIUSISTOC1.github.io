@@ -12,35 +12,34 @@
     <div class="nav-links">
         <a href="index.html">Accueil</a>
         <a href="projects.html" class="active">Projets</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="project-hero">
-    <a href="projects.html" class="back-link">← Retour aux projets</a>
-    <h1>Brainrot <span>Physics Arena</span></h1>
-    <p class="project-desc">Un jeu de physique multijoueur chaotique développé en Unity (C#), conçu pour tourner sur du matériel bas de gamme avec graphiques intégrés. Le projet de DeCorp.</p>
-    <div class="tags">
-        <span class="tag">Unity</span>
-        <span class="tag">C#</span>
-        <span class="tag">Multijoueur</span>
-        <span class="tag">Netcode</span>
-        <span class="tag">URP</span>
-    </div>
-    <img src="img/brainrot-arena.jpg" alt="Brainrot Physics Arena" class="project-img-main" onerror="this.onerror=null;this.src='https://placehold.co/900x420/1b1b1d/7c5cff?text=Brainrot+Physics+Arena'">
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="projects.html" class="active">Projets</a>
+    <a href="contact.html">Contact</a>
 </div>
+<div class="project-hero" id="project-header"></div>
+<div id="project-carousel" style="padding:0 6%;max-width:960px;margin:0 auto;"></div>
 <div class="project-content">
     <h2>Concept</h2>
-    <p>Brainrot Physics Arena est une arène multijoueur où la physique est au centre de tout. Les joueurs s'affrontent dans des environnements chaotiques avec des mécaniques de physique exagérées. Développé avec mon groupe DeCorp.</p>
+    <p>Une arène multijoueur où la physique est au centre de tout. Environnements chaotiques, mécaniques exagérées. Projet développé avec DeCorp.</p>
     <h2>Stack technique</h2>
     <ul>
         <li>Unity URP optimisé pour integrated graphics</li>
         <li>Netcode for GameObjects pour le multijoueur</li>
-        <li>Système de physique scriptée en C#</li>
+        <li>Physique scriptée en C#</li>
         <li>Paramètres graphiques ajustables par le joueur</li>
-        <li>Structure de projet organisée pour la collaboration</li>
+        <li>Structure de projet collaborative</li>
     </ul>
     <h2>Ce que j'ai appris</h2>
+    <p>Programmation réseau, optimisation graphique Unity, gestion d'un projet en équipe.</p>
 </div>
 <footer><p>© 2026 Darius</p></footer>
+<script src="projects-data.js"></script>
+<script src="ui.js"></script>
+<script>renderProjectPage("brainrot-arena");</script>
 </body>
 </html>
