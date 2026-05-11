@@ -42,6 +42,7 @@
             <span class="tag filter-tag" data-filter="JSON">JSON</span>
         </div>
     </div>
+
     <div class="filter-group">
         <div class="filter-group-label">Plateforme / Outil</div>
         <div class="filter-row">
@@ -52,6 +53,7 @@
             <span class="tag filter-tag" data-filter="Flipper Zero">Flipper Zero</span>
         </div>
     </div>
+
     <div class="filter-group">
         <div class="filter-group-label">Type de projet</div>
         <div class="filter-row">
@@ -65,6 +67,7 @@
             <span class="tag filter-tag" data-filter="Embarqué">Embarqué</span>
         </div>
     </div>
+
     <div class="filter-group">
         <div class="filter-group-label">Contexte</div>
         <div class="filter-row">
@@ -80,14 +83,20 @@
         <button class="reset-btn" id="reset-btn" style="display:none;">✕ Réinitialiser</button>
     </div>
 
+    <!-- Les cartes sont injectées ici par ui.js — badge statut inclus automatiquement -->
     <div class="grid" id="projects-grid"></div>
-    <p class="dict-empty" id="no-results">Aucun projet ne correspond.</p>
+
+    <p id="no-results" style="display:none; text-align:center; padding:50px 0; color:var(--muted); font-size:.95rem;">
+        Aucun projet ne correspond à ces filtres.
+    </p>
 </section>
 
 <footer><p>© 2026 Darius</p></footer>
 
 <script src="projects-data.js"></script>
 <script src="ui.js"></script>
-<script>renderProjectsPage('projects-grid', 'search', 'no-results');</script>
+<script>
+    renderProjectsPage('projects-grid', 'search', 'no-results');
+</script>
 </body>
 </html>
