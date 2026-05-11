@@ -71,7 +71,7 @@ const PROJECTS = [
     status: "done",
     version: null,
     tags: ["Batch", "Windows", "Automatisation", "Outil", "Solo", "Terminé"],
-    images: ["img/cmd-menu.jpg"],
+    images: ["img/CMV2,1.jpg","img/CMV2,2.jpg"],
     github: null
   },
   {
