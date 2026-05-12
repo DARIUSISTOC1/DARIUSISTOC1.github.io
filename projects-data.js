@@ -77,7 +77,7 @@ const PROJECTS = [
     version: "2.1.6.5 beta",
     tags: ["Batch", "Windows", "Automatisation", "Outil", "Solo", "Terminé"],
     images: ["img/CMV2,1.png","img/CMV2,2.png"],
-    github: null
+    github: "https://github.com/DARIUSISTOC1/CMD-MENUv2"
   },
   {
     id: "tycoon-roblox",
