@@ -42,7 +42,7 @@ const PROJECTS = [
     desc: "Jeu de physique multijoueur chaotique en Unity, optimisé pour le bas de gamme. Projet DeCorp.",
     status: "stopped",
     version: null,
-    tags: ["Unity", "C#", "Multijoueur", "Jeu vidéo", "Équipe", "Arrêt"],
+    tags: ["Unity", "C#", "Multijoueur", "Jeu vidéo", "Équipe", "Arrêté"],
     images: ["img/brainrot-arena.jpg"],
     github: null
   },
@@ -53,7 +53,7 @@ const PROJECTS = [
     desc: "Gestion de rôles automatique, commandes avancées et logs pour serveur Discord.",
     status: "stopped",
     version: null,
-    tags: ["Python", "Discord", "Automatisation", "Bot", "Solo", "Arrêt"],
+    tags: ["Python", "Discord", "Automatisation", "Bot", "Solo", "Arrêté"],
     images: ["img/bot-discord.jpg"],
     github: null
   },
@@ -64,7 +64,7 @@ const PROJECTS = [
     desc: "Système d'interface de cartes pour un jeu original. Raretés, stats, animations.",
     status: "sleeping",
     version: "0.1.2",
-    tags: ["UI Design", "Jeu vidéo", "Solo", "Sleeping"],
+    tags: ["UI Design", "Jeu vidéo", "Solo", "En veille"],
     images: ["img/ui-cards.jpg"],
     github: null
   },
@@ -86,7 +86,7 @@ const PROJECTS = [
     desc: "Jeu tycoon Roblox Studio. Système d'argent, upgrades et progression joueur.",
     status: "sleeping",
     version: null,
-    tags: ["Roblox", "Lua", "Jeu vidéo", "Solo", "Veille"],
+    tags: ["Roblox", "Lua", "Jeu vidéo", "Solo", "En veille"],
     images: ["img/tycoon-roblox.jpg"],
     github: null
   },
@@ -108,7 +108,7 @@ const PROJECTS = [
     desc: "Remake du jeu 2048 avec des règles et un gameplay modifiés.",
     status: "stopped",
     version: null,
-    tags: ["JavaScript", "HTML/CSS", "Jeu vidéo", "Solo", "arrêt"],
+    tags: ["JavaScript", "HTML/CSS", "Jeu vidéo", "Solo", "Arrêté"],
     images: ["img/2048-modifie.jpg"],
     github: null
   },
