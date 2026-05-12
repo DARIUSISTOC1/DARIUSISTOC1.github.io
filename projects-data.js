@@ -33,7 +33,7 @@ const PROJECTS = [
     version: "1.1.3",
     tags: ["Python", "IA", "Assistant", "Solo", "Terminé"],
     images: ["img/assistant-jarvis.jpg"],
-    github: null
+    github: "https://github.com/DARIUSISTOC1/assist"
   },
   {
     id: "brainrot-arena",
@@ -66,7 +66,7 @@ const PROJECTS = [
     version: "0.1.2",
     tags: ["UI Design", "Jeu vidéo", "Solo", "En veille"],
     images: ["img/ui-cards.jpg"],
-    github: null
+    github: "https://github.com/myfight2047-ui/May-Studios---Jeu-de-Cartes---Version-0.1.2"
   },
   {
     id: "cmd-menu",
@@ -88,7 +88,7 @@ const PROJECTS = [
     version: null,
     tags: ["Roblox", "Lua", "Jeu vidéo", "Solo", "En veille"],
     images: ["img/tycoon-roblox.jpg"],
-    github: null
+    github: "https://www.roblox.com/fr/games/93098457546824"
   },
   {
     id: "neurotek-firmware",
@@ -99,7 +99,7 @@ const PROJECTS = [
     version: null,
     tags: ["C", "Firmware", "Flipper Zero", "Embarqué", "Solo", "Arrêt"],
     images: ["img/neurotek-firmware.jpg"],
-    github: null
+    github: "https://github.com/DARIUSISTOC1/neurotek-firmware"
   },
   {
     id: "2048-modifie",
@@ -120,8 +120,8 @@ const PROJECTS = [
     status: "wip",
     version: null,
     tags: ["HTML/CSS", "JavaScript", "UI Design", "Solo", "En cours"],
-    images: ["img/portfolio-site.jpg"],
-    github: null
+    images: ["img/portfolio,1.png","img/portfolio,2.png","img/portfolio,3.png"],
+    github: "https://github.com/DARIUSISTOC1/DARIUSISTOC1.github.io"
   },
   {
     id: "dictionnaire-eleves",
@@ -143,6 +143,6 @@ const PROJECTS = [
     version: null,
     tags: ["HTML/CSS", "JavaScript", "UI Design", "Solo", "Suspendu"],
     images: ["img/maystudio.jpg"],
-    github: null
+    github: "https://github.com/DARIUSISTOC1/sitewebmaystudio"
   }
 ];
