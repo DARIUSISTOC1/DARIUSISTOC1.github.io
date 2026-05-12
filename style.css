@@ -72,7 +72,7 @@ body.light .mobile-menu { background:rgba(245,245,245,.97); }
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:22px; }
 .card { background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.22); transition:transform .2s,border-color .2s; text-decoration:none; color:var(--text); display:block; position:relative; }
 .card:hover { transform:translateY(-4px); border-color:var(--accent); }
-..card img { width:100%; display:block; height:160px; object-fit:cover; position:relative; z-index:0; }
+.card img { width:100%; display:block; height:160px; object-fit:cover; position:relative; z-index:0; }
 .card-body { padding:15px; }
 .card-body h3 { font-weight:700; font-size:.97rem; color:var(--accent2); margin-bottom:5px; }
 .card-subtitle { font-size:.82rem; opacity:.7; font-weight:400; }
