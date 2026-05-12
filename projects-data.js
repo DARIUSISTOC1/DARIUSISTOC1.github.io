@@ -11,7 +11,12 @@
  *  title     — titre affiché
  *  subtitle  — sous-titre coloré (optionnel)
  *  desc      — description courte (carte)
- *  status    — "done" | "wip"
+ *  Status :
+ *   done = terminé
+ *   wip = en cours
+ *   paused = suspendu (pause courte)
+ *   sleeping = en veille (pause longue)
+ *   stopped = arrêté (abandon)
  *  version   — ex: "1.1.3" | null (non renseigné) | "N/A"
  *  tags      — tableau de strings (utilisés pour les filtres)
  *  images    — tableau de chemins d'images (au moins 1 placeholder)
@@ -35,9 +40,9 @@ const PROJECTS = [
     title: "Brainrot Physics Arena",
     subtitle: null,
     desc: "Jeu de physique multijoueur chaotique en Unity, optimisé pour le bas de gamme. Projet DeCorp.",
-    status: "wip",
+    status: "stopped",
     version: null,
-    tags: ["Unity", "C#", "Multijoueur", "Jeu vidéo", "Équipe", "En cours"],
+    tags: ["Unity", "C#", "Multijoueur", "Jeu vidéo", "Équipe", "Arrêt"],
     images: ["img/brainrot-arena.jpg"],
     github: null
   },
@@ -46,9 +51,9 @@ const PROJECTS = [
     title: "Bot Discord",
     subtitle: null,
     desc: "Gestion de rôles automatique, commandes avancées et logs pour serveur Discord.",
-    status: "wip",
+    status: "stopped",
     version: null,
-    tags: ["Python", "Discord", "Automatisation", "Bot", "Solo", "En cours"],
+    tags: ["Python", "Discord", "Automatisation", "Bot", "Solo", "Arrêt"],
     images: ["img/bot-discord.jpg"],
     github: null
   },
@@ -57,9 +62,9 @@ const PROJECTS = [
     title: "UI Cards System",
     subtitle: null,
     desc: "Système d'interface de cartes pour un jeu original. Raretés, stats, animations.",
-    status: "wip",
+    status: "sleeping",
     version: "0.1.2",
-    tags: ["UI Design", "Jeu vidéo", "Solo", "En cours"],
+    tags: ["UI Design", "Jeu vidéo", "Solo", "Sleeping"],
     images: ["img/ui-cards.jpg"],
     github: null
   },
@@ -79,9 +84,9 @@ const PROJECTS = [
     title: "Tycoon Roblox",
     subtitle: null,
     desc: "Jeu tycoon Roblox Studio. Système d'argent, upgrades et progression joueur.",
-    status: "wip",
+    status: "sleeping",
     version: null,
-    tags: ["Roblox", "Lua", "Jeu vidéo", "Solo", "En cours"],
+    tags: ["Roblox", "Lua", "Jeu vidéo", "Solo", "Veille"],
     images: ["img/tycoon-roblox.jpg"],
     github: null
   },
@@ -90,9 +95,9 @@ const PROJECTS = [
     title: "Neurotek Firmware",
     subtitle: null,
     desc: "Firmware personnalisé pour Flipper Zero. Extensions et modules custom.",
-    status: "wip",
+    status: "stopped",
     version: null,
-    tags: ["C", "Firmware", "Flipper Zero", "Embarqué", "Solo", "En cours"],
+    tags: ["C", "Firmware", "Flipper Zero", "Embarqué", "Solo", "Arrêt"],
     images: ["img/neurotek-firmware.jpg"],
     github: null
   },
@@ -101,9 +106,9 @@ const PROJECTS = [
     title: "2048 Modifié",
     subtitle: null,
     desc: "Remake du jeu 2048 avec des règles et un gameplay modifiés.",
-    status: "wip",
+    status: "stopped",
     version: null,
-    tags: ["JavaScript", "HTML/CSS", "Jeu vidéo", "Solo", "En cours"],
+    tags: ["JavaScript", "HTML/CSS", "Jeu vidéo", "Solo", "arrêt"],
     images: ["img/2048-modifie.jpg"],
     github: null
   },
@@ -123,9 +128,9 @@ const PROJECTS = [
     title: "Dictionnaire Élèves",
     subtitle: null,
     desc: "Base de données/annuaire des élèves de mon lycée. Lecture depuis un fichier JSON, recherche dynamique.",
-    status: "wip",
+    status: "paused",
     version: null,
-    tags: ["HTML/CSS", "JavaScript", "JSON", "Outil", "Solo", "En cours"],
+    tags: ["HTML/CSS", "JavaScript", "JSON", "Outil", "Solo", "Suspendu"],
     images: ["img/dictionnaire-eleves.jpg"],
     github: null
   },
@@ -134,9 +139,9 @@ const PROJECTS = [
     title: "MayStudio",
     subtitle: "site vitrine",
     desc: "Site vitrine réalisé pour l'entreprise d'un ami — MayStudio.",
-    status: "wip",
+    status: "paused",
     version: null,
-    tags: ["HTML/CSS", "JavaScript", "UI Design", "Solo", "En cours"],
+    tags: ["HTML/CSS", "JavaScript", "UI Design", "Solo", "Suspendu"],
     images: ["img/maystudio.jpg"],
     github: null
   }

@@ -82,7 +82,10 @@ body.light .mobile-menu { background:rgba(245,245,245,.97); }
 /* ── STATUS BADGE ── */
 .status-badge { position:absolute; top:10px; right:10px; z-index:2; font-family:'Space Mono',monospace; font-size:.68rem; font-weight:700; padding:3px 9px; border-radius:20px; letter-spacing:.3px; pointer-events:none; }
 .status-done { background:rgba(34,197,94,.15); color:#4ade80; border:1px solid rgba(34,197,94,.3); }
-.status-wip { background:rgba(251,191,36,.12); color:#fbbf24; border:1px solid rgba(251,191,36,.25); }
+.status-wip { background:rgba(251,191,36,.12); color:#fbf024; border:1px solid rgba(251,191,36,.25); }
+.status-paused { background: rgba(255,193,7,.15); color: #eca626; border: 1px solid rgba(255, 193, 7, 0.25);}
+.status-stopped {background: rgba(239,68,68,.12);color: #ff6b6b;border: 1px solid rgba(239, 68, 68, 0.25);}
+.status-sleeping {background: rgba(148,163,184,.12);color: #94a3b8;border: 1px solid rgba(148, 163, 184, 0.25);}
 
 /* ── TAGS ── */
 .tag { background:rgba(124,92,255,.1); border:1px solid var(--border); color:var(--accent2); padding:4px 11px; border-radius:20px; font-size:.75rem; font-weight:600; font-family:'Space Mono',monospace; white-space:nowrap; cursor:default; transition:background .18s,color .18s,border-color .18s; }

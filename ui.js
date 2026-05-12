@@ -21,10 +21,24 @@
 
 /* ── Helpers ── */
 function statusBadgeHTML(status, version) {
-  const label = status === 'done'
+  const label =
+  status === 'done'
     ? (version ? `Terminé · v${version}` : 'Terminé')
-    : (version ? `En cours · v${version}` : 'En cours');
-  const cls = status === 'done' ? 'status-done' : 'status-wip';
+    : status === 'paused'
+      ? (version ? `Suspendu · v${version}` : 'Suspendu')
+      : status === 'sleeping'
+        ? (version ? `En veille · v${version}` : 'En veille')
+        : status === 'stopped'
+          ? (version ? `Arrêté · v${version}` : 'Arrêté')
+          : (version ? `En cours · v${version}` : 'En cours');
+const cls =
+  status === 'done'
+    ? 'status-done'
+    : status === 'paused'
+      ? 'status-paused'
+      : status === 'stopped'
+        ? 'status-stopped'
+        : 'status-wip';
   return `<span class="status-badge ${cls}">${label}</span>`;
 }
 
