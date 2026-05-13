@@ -120,7 +120,7 @@ const PROJECTS = [
     status: "wip",
     version: null,
     tags: ["HTML/CSS", "JavaScript", "UI Design", "Solo", "En cours"],
-    images: ["img/portfolio,1.png","img/portfolio,2.png","img/portfolio,3.png"],
+    images: ["img/Portfolio,1.png","img/Portfolio,2.png","img/Portfolio,3.png"],
     github: "https://github.com/DARIUSISTOC1/DARIUSISTOC1.github.io"
   },
   {
